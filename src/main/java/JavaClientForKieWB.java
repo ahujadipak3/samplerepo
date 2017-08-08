@@ -1,7 +1,7 @@
 
 import java.io.InputStream;
 
-import nividous.loanunderwriting.Loan;
+//import nividous.loanunderwriting.Loan;
 
 import org.drools.core.io.impl.UrlResource;
 import org.kie.api.KieServices;
@@ -42,7 +42,7 @@ public class JavaClientForKieWB {
 			loan.setLoanpremium(2000);
 			loan.setCreditscore(80);
 			loan.setIndustry("Legal Services");*/
-			kieSession.insert(loan);
+		//	kieSession.insert(loan);
 			kieSession.fireAllRules();
 			
 			System.out.println("Testin");
