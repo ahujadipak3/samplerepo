@@ -34,19 +34,19 @@ public class JavaClientForKieWB {
 			KieContainer kieContainer = ks.getKieClasspathContainer();
 			
 			KieSession kieSession = kieContainer.newKieSession();
-			Loan loan =new Loan();
+			/*Loan loan =new Loan();
 			System.out.println("Loan Status: "+ loan.isLoanstatus() + "Loan Reason :: "+ loan.getReason());
 			//loantype == "Home Loan" , annualIncome >= 75000 , loanpremium < 3500 , creditscore >= 70 , industry == "Legal Services" 
 			loan.setLoantype("HomeLoan");
 			loan.setAnnualIncome(760000);
 			loan.setLoanpremium(2000);
 			loan.setCreditscore(80);
-			loan.setIndustry("Legal Services");
+			loan.setIndustry("Legal Services");*/
 			kieSession.insert(loan);
 			kieSession.fireAllRules();
 			
 			System.out.println("Testin");
-			System.out.println("Loan Status: "+ loan.isLoanstatus() + "Loan Reason :: "+ loan.getReason());
+			//System.out.println("Loan Status: "+ loan.isLoanstatus() + "Loan Reason :: "+ loan.getReason());
 			//StatelessKieSession kieSession2 = kieContainer.newStatelessKieSession("defaultStatelessKieSession");
 			//kieSession.fireAllRules();
 		} catch (Exception ex) {
